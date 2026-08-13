@@ -18,7 +18,7 @@ Use a chisel and hammer to separate the diffuser from the housing.
 
 Use a thin, flathead screwdriver to pry the LED board up from the metal housing. This will disconnect the wires leading to the E26 socket. I reattached them by soldering new wires to the E26 socket and board. To avoid this, you can try pushing out the wires from these center two pins before prying up the board, using a needle or 22 gauge wire:
 
-<img width="836" height="866" alt="image" src="https://github.com/user-attachments/assets/8ddae0d5-d47d-45bf-9f8b-2ea2d08cb9ca" />
+![image of the main board of the bulb](image1.png "image of the main board of the bulb")
 
 (I soldered these pins for added rigidity, they are press-fit in the original assembly).
 
