@@ -51,8 +51,6 @@ bk72xx:
 logger:
 
 api:
-  encryption:
-    key: API_KEY
 
 esphome:
   project:
@@ -66,8 +64,6 @@ substitutions:
   display_name: "Energizer Color Bulb 1"
 
 ota:
-  - platform: esphome
-    password: !secret my_esp_ota_pwd
 
 wifi:
   ssid: WIFI_USERNAME
