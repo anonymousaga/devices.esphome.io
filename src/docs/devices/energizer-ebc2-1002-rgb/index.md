@@ -7,7 +7,26 @@ board: bk72xx
 difficulty: 4
 ---
 
-<!-- Describe the device here. See the front-matter table on the contributing page for valid options. -->
+This is an Energizer BR30 RGBWW light bulb for the US market (E26 base). I found this as a 2-pack for $5 at BJ's.
+
+## Initial Install
+
+You must open the bulb to access the VDD, GND, RX, and TX pins. They can be accessed on the custom BK7231N daughterboard.
+
+#### Initial Dissasembly
+Use a chisel and hammer to separate the diffuser from the 
+
+## GPIO Pinout
+
+| Pin    | Function                           |
+| ------ | ---------------------------------- |
+| GPIO13 | Push Button (HIGH = off, LOW = on) |
+| GPIO4  | Relay                              |
+| GPIO15 | RED LED (HIGH = on, LOW = off)     |
+| GPIO12 | BL0937 SEL                         |
+| GPIO5  | BL0937 CF                          |
+| GPIO14 | BL0937 CF1                         |
+|        | Blue LED                           |
 
 ## Basic Configuration
 
