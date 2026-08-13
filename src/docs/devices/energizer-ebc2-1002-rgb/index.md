@@ -19,25 +19,28 @@ Use a chisel and hammer to separate the diffuser from the housing.
 Use a thin, flathead screwdriver to pry the LED board up from the metal housing. This will disconnect the wires leading to the E26 socket. I reattached them by soldering new wires to the E26 socket and board. To avoid this, you can try pushing out the wires from these center two pins before prying up the board, using a needle or 22 gauge wire:
 
 <img width="836" height="866" alt="image" src="https://github.com/user-attachments/assets/8ddae0d5-d47d-45bf-9f8b-2ea2d08cb9ca" />
+
 (I soldered these pins for added rigidity, they are press-fit in the original assembly).
 
 #### Flashing
 
+Solder 3.3V, RX, TX, and GND to a USB to UART adapter from the pins on the bottom daughterboard. The pins are labelled in the silk screen.
 
+<img width="1023" height="871" alt="image" src="https://github.com/user-attachments/assets/fe061c8e-bead-4532-abdb-8107f408f586" />
 
+Solder a small jumper wire to the CEN pad, as you will need to temporarily jump this pin to GND when flashing.
 
+Compile the ESPHome image and save it as a uf2 file.
 
-## GPIO Pinout
+Install ltchiptool on your computer, plug the UART adapter in, and run `ltchiptool flash write firmware.uf2`. Keep CEN shorted to GND for the first few seconds, as ltchiptool attempts to connect to the chip. Once you see a progress bar of flashing, disconnect the CEN pin.
 
-| Pin    | Function                           |
-| ------ | ---------------------------------- |
-| GPIO13 | Push Button (HIGH = off, LOW = on) |
-| GPIO4  | Relay                              |
-| GPIO15 | RED LED (HIGH = on, LOW = off)     |
-| GPIO12 | BL0937 SEL                         |
-| GPIO5  | BL0937 CF                          |
-| GPIO14 | BL0937 CF1                         |
-|        | Blue LED                           |
+Once your device fully flashes, reboots, and connects to the Wi-Fi, you can desolder the UART adapter, and re-assemble the device.
+
+## Notes
+
+Instead of using PWM, this device uses a bp5758 i2c 5-channel LED dimmer.
+
+There are two on the main board, but only one is wired (5 channels - red, green, blue, warm white, cool white). The other one seems to be for a different SKU of product, as its traces lead nowhere on the board.
 
 ## Basic Configuration
 
