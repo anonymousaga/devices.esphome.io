@@ -14,7 +14,18 @@ This is an Energizer BR30 RGBWW light bulb for the US market (E26 base). I found
 You must open the bulb to access the VDD, GND, RX, and TX pins. They can be accessed on the custom BK7231N daughterboard.
 
 #### Initial Dissasembly
-Use a chisel and hammer to separate the diffuser from the 
+Use a chisel and hammer to separate the diffuser from the housing.
+
+Use a thin, flathead screwdriver to pry the LED board up from the metal housing. This will disconnect the wires leading to the E26 socket. I reattached them by soldering new wires to the E26 socket and board. To avoid this, you can try pushing out the wires from these center two pins before prying up the board, using a needle or 22 gauge wire:
+
+<img width="836" height="866" alt="image" src="https://github.com/user-attachments/assets/8ddae0d5-d47d-45bf-9f8b-2ea2d08cb9ca" />
+(I soldered these pins for added rigidity, they are press-fit in the original assembly).
+
+#### Flashing
+
+
+
+
 
 ## GPIO Pinout
 
