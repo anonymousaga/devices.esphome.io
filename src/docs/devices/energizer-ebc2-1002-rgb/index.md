@@ -26,7 +26,7 @@ Use a thin, flathead screwdriver to pry the LED board up from the metal housing.
 
 Solder 3.3V, RX, TX, and GND to a USB to UART adapter from the pins on the bottom daughterboard. The pins are labelled in the silk screen.
 
-<img width="1023" height="871" alt="image" src="https://github.com/user-attachments/assets/fe061c8e-bead-4532-abdb-8107f408f586" />
+![image of the daughterboard of the bulb](image2.png "image of the daughterboard of the bulb")
 
 Solder a small jumper wire to the CEN pad, as you will need to temporarily jump this pin to GND when flashing.
 
